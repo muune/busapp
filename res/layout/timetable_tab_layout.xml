@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/timetable_date_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"    
+    android:gravity="center"
+    android:padding="15dp" >
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="즐겨찾기"
+        android:textColor="@drawable/recent_text" 
+        android:textStyle="bold"	                
+        android:id="@+id/widget_activity_btn_favo"
+        android:background="@drawable/btn_stop"/>
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="검색"         
+        android:textStyle="bold"
+        android:id="@+id/widget_activity_btn_search"
+        android:textColor="@drawable/recent_text"
+        android:background="@drawable/btn_bus"/>
+</LinearLayout>

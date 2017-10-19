@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="50dp"
+    android:id="@+id/rideoff_row">
+
+    <teamdoppelganger.smarterbus.util.widget.LineImageView
+        android:id="@+id/busImg"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/busImg"
+        android:padding="15dp"
+        android:id="@+id/stationName"
+        android:text="파크타운.롯데아파트"
+        android:textSize="15dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:id="@+id/select_btn"
+        android:text="선택"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:id="@+id/rideoff_alaram_btn"
+        android:src="@drawable/btn_edit"/>
+
+</RelativeLayout>

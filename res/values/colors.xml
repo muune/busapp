@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <color name="favorite_back">#ffffff</color>
+    
+    <color name="choice_color1">#cc0001</color>
+    <color name="choice_color2">#ff8a00</color>
+    <color name="choice_color3">#669900</color>
+    <color name="choice_color4">#9a33cc</color>
+    <color name="choice_color5">#0099cb</color>
+    
+    <color name="tab_nomal">#ffffff</color>
+    <color name="tab_press">#069afe</color>
+    
+    <color name="trans">#00ffffff</color>
+    
+    <color name="btn_color_back">#e6e6e6</color>
+    <color name="btn_color_nomal">#ffffff</color>
+    <color name="line_color">#40a2ff</color>
+    
+    <color name="arrive_color">#f47a7f</color>
+    <color name="arrive_nomal">#a8a8a8</color>
+    
+    <color name="recent_text_nomal">#ffffff</color>
+    <color name="recent_text_press">#000000</color>
+    
+    <color name="bus_detail_in_color">#c4ccd2</color>
+    <color name="bus_detail_border_color">#747d83</color>
+    <color name="bus_detail_text_color">#555555</color>
+     
+    <color name="bus_arrive_color">#000000</color>
+    
+    <color name="alarm_disable_color">#dfdfdf</color>
+    
+    
+    <color name="menu_focus_color">#959595</color>
+    <color name="menu_disable_color">#555555</color>
+    
+    <color name="select_stop_color">#E8E8E8</color>
+    
+    <color name="stop_nomal">#333333</color>
+    <color name="stop_press">#25a2fa</color>
+    
+    <color name="color_sub_1">#0000FF</color>
+    <color name="color_sub_2">#00B050</color>
+    <color name="color_sub_3">#996600</color>
+    <color name="color_sub_4">#FF0000</color>
+    <color name="color_sub_5">#FF00FF</color>
+    <color name="color_sub_6">#FF6600</color>
+    <color name="color_sub_7">#FFCC00</color>
+    
+    <color name="color_1">#8283fe</color>
+    <color name="color_2">#64ce94</color>
+    <color name="color_3">#996600</color>
+    <color name="color_4">#fa7e7e</color>
+    <color name="color_5">#FF00FF</color>
+    <color name="color_6">#fea76e</color>
+    <color name="color_7">#fde47f</color>
+
+    <color name="actionbar">#069afe</color>
+    
+</resources>

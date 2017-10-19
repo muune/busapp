@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:layout_width="111dp"
+  	android:layout_height="wrap_content">
+	<teamdoppelganger.smarterbus.util.widget.SlideButton
+		android:layout_width="74dp"
+		android:layout_height="28dp"
+		android:layout_marginLeft="8dp"
+		android:content="@+id/slideContentLayout"
+		android:handle="@+id/slideHandle"
+		android:background="@drawable/btn_alarm_bg"
+		android:topOffset="25dp"
+		android:orientation="horizontal"
+		android:id="@+id/slideButton">
+		<Button
+			android:layout_width="27dp"
+			android:layout_height="28dp"
+			android:id="@+id/slideHandle"
+			android:background="@drawable/btn_alarm"/>
+		<LinearLayout
+			android:layout_width="22dp"
+			android:layout_height="25dp"
+			android:orientation="horizontal"
+			android:layout_weight="1"
+			android:id="@+id/slideContentLayout"/>
+	</teamdoppelganger.smarterbus.util.widget.SlideButton>
+	<TextView 
+	    android:id="@+id/slide_button_txt_sound"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:layout_marginRight="10dp"
+	    android:text="ON"
+	    android:textColor="@drawable/setting_slide_txt_color"
+	    android:textSize="15dp"/>
+	<TextView 
+	    android:id="@+id/slide_button_txt_vibe"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:layout_toRightOf="@id/slideButton"
+	    android:layout_marginLeft="5dp"
+	    android:text="OFF"
+	    android:textColor="@drawable/setting_slide_txt_color"
+	    android:textSize="15dp"/>
+</RelativeLayout>

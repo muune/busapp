@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="back"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/stopDetailHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/layout_left_margin"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/headerStopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:singleLine="true"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/headerStopNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#9d9d9d"
+                android:textSize="13sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    
+
+        <ImageView
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn"
+            android:gravity="center"
+            android:padding="10dp"
+            android:scaleType="center"
+            android:src="@drawable/btn_close"
+            android:text="exit" />
+    </RelativeLayout>
+
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:scaleType="fitXY"
+        android:id="@+id/subLine"
+        android:layout_below="@id/navigation"
+        android:src="@drawable/submenu_shadow" />
+
+    <include layout="@layout/admixer" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subLine"
+        android:id="@+id/orderSection"
+        android:gravity="left" >
+
+        <TextView
+            android:id="@+id/resultCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"                      
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"            
+            android:paddingTop="5dp"
+            android:textColor="#777777"
+            android:text="검색 결과"
+            android:textSize="20sp"
+            />
+
+        
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_below="@id/orderSection"
+        android:src="@drawable/submenu_shadow" />
+
+    <RelativeLayout
+        android:id="@+id/coverLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/admixer_layout"
+        android:layout_below="@id/orderSection" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/admixer_layout"
+        android:layout_below="@id/orderSection" />
+    
+    <ProgressBar 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress"/>
+
+</RelativeLayout>

@@ -1,0 +1,162 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"    
+    tools:context=".SBMainActivity" >
+
+	<LinearLayout
+		android:id="@+id/stopfavorite"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="right">
+
+
+			<TextView
+				android:id="@+id/partDelBtn"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/btn"
+				android:drawableLeft="@drawable/recent_btn_delete"
+				android:drawablePadding="10dp"
+				android:paddingBottom="5dp"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:paddingTop="5dp"
+				android:text="선택삭제"
+				android:textSize="20sp"
+				android:visibility="gone" />
+
+
+			<TextView
+				android:id="@+id/editBtn"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/btn"
+				android:drawableLeft="@drawable/btn_edit"
+				android:drawablePadding="10dp"
+				android:paddingBottom="5dp"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:paddingTop="5dp"
+				android:text="편집"
+				android:textSize="20sp" />
+
+
+		</LinearLayout>
+
+		<ImageView
+			android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/submenu_shadow" />
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="#f3f3f3"
+			android:paddingBottom="15dp"
+			android:paddingTop="15dp">
+
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:orientation="horizontal">
+
+				<Button
+					android:id="@+id/recentStopBtn"
+					android:layout_width="wrap_content"
+					android:layout_height="35dp"
+					android:background="@drawable/btn_stop"
+					android:text="정류소"
+					android:textColor="@drawable/recent_text" />
+
+				<Button
+					android:id="@+id/recentBusBtn"
+					android:layout_width="wrap_content"
+					android:layout_height="35dp"
+					android:background="@drawable/btn_bus"
+					android:text="버스"
+					android:textColor="@drawable/recent_text" />
+			</LinearLayout>
+
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<CheckBox
+					android:id="@+id/allCheck"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="15dp"
+					android:button="@drawable/bus_checkbox"
+					android:visibility="gone" />
+			</LinearLayout>
+
+
+		</RelativeLayout>
+
+		<ImageView
+			android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/submenu_shadow" />
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<!--  <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true" >
+
+                <Button
+                    android:id="@+id/recentStopBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recent_stop" />
+
+                <Button
+                    android:id="@+id/recentBusBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recent_bus" />
+            </LinearLayout> -->
+
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<ListView
+				android:id="@+id/list"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+
+			<TextView
+				android:id="@+id/nothingContentsRecent"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_centerInParent="true"
+				android:gravity="center"
+                android:text="최근  내역이 없습니다." />
+
+		</RelativeLayout>
+
+	</LinearLayout>
+
+</LinearLayout>

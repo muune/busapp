@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="20dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dp"
+    >
+        
+    
+    
+     <CheckBox 
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:id="@+id/checkBox"         
+         android:focusable="false"
+         android:button="@drawable/bus_checkbox"
+         android:layout_marginLeft="9dp"
+         android:layout_marginRight="15dp"
+         android:layout_alignParentLeft="true" 
+         android:layout_centerVertical="true"/>
+         
+     
+     <LinearLayout 
+         android:layout_width="wrap_content"
+         android:layout_height="50dp"
+         android:gravity="center_vertical"
+         android:orientation="vertical"
+         android:layout_toRightOf="@id/checkBox">
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"            
+            android:id="@+id/name"
+            android:textSize="20sp"
+            android:layout_marginLeft="4dp"
+            android:layout_alignParentTop="true"
+            />          
+     <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/subname"
+            android:layout_below="@id/name"
+            android:textColor="#777777"
+            android:textSize="18sp"
+            android:layout_marginLeft="4dp"
+             />
+     
+         
+     </LinearLayout>
+     
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentRight="true"         
+         android:textColor="#aaaaaa"         
+         android:id="@+id/locationName" />
+     
+    
+
+</RelativeLayout>

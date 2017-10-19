@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical" >
+
+    
+    
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stopName"
+        android:layout_marginLeft="20dp"
+        android:layout_centerVertical="true"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        />
+    
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/refreshBtn" 
+        android:background="@drawable/sub_btn"
+        android:drawableTop="@drawable/btn_ic_refresh"
+        android:gravity="center"      
+        android:textSize="14sp"
+        android:textColor="#555555"  
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"        
+        android:layout_marginRight="10dp"        
+        android:text="갱신"
+        />
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/favoriteBtn" 
+        android:background="@drawable/sub_btn"
+        android:drawableTop="@drawable/btn_ic_marker"
+        android:gravity="center"        
+        android:layout_toLeftOf="@id/refreshBtn"
+        android:layout_centerVertical="true"        
+        android:layout_marginRight="5dp"
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:text="즐겨찾기"
+        />
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/pathBtn"
+        android:layout_toLeftOf="@id/favoriteBtn" 
+        android:layout_centerVertical="true"        
+        android:layout_marginRight="5dp"
+        android:background="@drawable/sub_btn"
+        android:drawableTop="@drawable/btn_ic_map"
+        android:gravity="center"  
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:text="지도"
+        />
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/addShortcutBtn"
+        android:layout_toLeftOf="@id/pathBtn" 
+        android:layout_centerVertical="true"        
+        android:layout_marginRight="5dp"
+        android:background="@drawable/sub_btn"
+        android:drawableTop="@drawable/btn_ic_widget"
+        android:gravity="center"  
+        android:textSize="14sp"
+        android:textColor="#555555"
+        android:text="홈에추가"
+        />      
+    
+    
+    
+    
+    
+    
+    
+    
+
+</RelativeLayout>

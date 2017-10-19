@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SBMainActivity" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/inforLayout"        
+        >        
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/setting_image"
+            android:scaleType="centerCrop" />
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:text="@string/app_name"
+            android:textColor="#393d3f"
+            android:id="@+id/appName" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            
+            android:layout_marginLeft="10dp"    
+            android:textSize="16sp"        
+            android:text="전국 스마트 버스를 이용해 주셔서\n감사합니다."  
+            android:layout_below="@id/appName"    
+            android:textColor="#777777"      
+            />            
+    </RelativeLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#898989"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@id/inforLayout"
+        android:id="@+id/versionLayout"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            
+            android:textColor="#ffffff"
+            android:text="@string/app_ver"/>
+        
+    </LinearLayout>
+        
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/versionLayout" />
+
+    <ImageView 
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"						
+		android:src="@drawable/submenu_shadow"
+		android:layout_below="@id/listView"
+		android:scaleType="fitXY" />
+
+</RelativeLayout>

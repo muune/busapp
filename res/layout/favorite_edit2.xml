@@ -1,0 +1,45 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:paddingTop="15dp"
+	android:paddingRight="5dp"
+	android:paddingBottom="15dp">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginBottom="10dp">
+		<TextView
+			android:layout_width="80dp"
+			android:layout_height="wrap_content"
+			android:gravity="right"
+			android:layout_marginRight="10dp"
+			android:id="@+id/busNum_title"
+			android:text="노선번호"/>
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/busNum"
+			android:text="aasdf"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<TextView
+			android:layout_width="80dp"
+			android:layout_height="wrap_content"
+			android:gravity="right"
+			android:layout_marginRight="10dp"
+			android:text="메모" />
+		<EditText
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/busText"
+			android:hint="Enter text here.." />
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_ver">2.0.0</string>
+    
+    <string name="app_name">전국 스마트 버스</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="menu1">즐겨찾기</string>
+    <string name="menu2">최근검색</string>
+    <string name="menu3">검색</string>
+    <string name="menu4">주변검색</string>
+    <string name="menu5">설정</string>
+    
+    <string name="search1">정류장</string>
+    <string name="search2">버스</string>
+    <string name="search3">경로</string>
+    
+    
+    <string name="loading">데이터를 불러오고있습니다.</string>
+    <string name="favorite_edit">즐겨찾기 편집</string>
+    <string name="favorite_route_name">노선명</string>
+    <string name="favorite_stop_name">정류소명</string>
+    <string name="favorite_color_type">색계열</string>
+    <string name="favorite_color_detail">세부색상</string>
+
+    <string name="recent_stop">정류소</string>    
+    <string name="recent_bus">버스</string>
+    
+    <string name="first_bus">첫번째버스</string>
+    <string name="second_bus">두번째버스</string>
+    <string name="alarm_min">분전</string>
+    <string name="alarm_stop">전</string>
+    
+    <string name="dialog_msg_googlemap_null">네트워크 상태가 좋지 않습니다. 몇 초 후 다시 이용해 주세요.</string>
+    
+    <string name="dialog_msg_location_fail">위치정보를 받아올 수 없습니다. GPS상태를 확인해주세요.</string>
+    <string name="dialog_title_search_position">현재 위치 찾는 중...</string>
+    <string name="dialog_msg_location_permission">위치정보 사용 권한이 설정되지 않았습니다. 설정 페이지로 이동 하시겠습니까?</string>
+    <string name="dialog_positive">확인</string>
+	<string name="dialog_negative">취소</string>
+	
+	<string name="dialog_title_lbs_agree">위치정보사용</string>
+	<string name="dialog_msg_lbs_agree">전국 스마트 버스에서 현재 위치를 사용하고자 합니다.\n앱에서 위치에 접근하도록 허용하시겠습니까?</string>
+	
+	<string name="favorite_nick_stop">정류소명</string>
+	<string name="favorite_nick_bus">노선명</string>
+	<string name="favorite_nick">별명</string>
+	
+	
+	<string name="hint_stop_search">정류소명/정류소 id를 입력하세요</string>
+	<string name="hint_bus_search">노선명을 입력하세요</string>
+	<string name="hint_auto_search">두글자이상의 지역명을 입력하세요</string>
+	
+	
+	<string name="state_prepare">출발 준비중</string>
+	<!--<string name="state_prepare_not">도착 예정 버스 없음</string>-->
+    <string name="state_prepare_not"></string>
+	<string name="state_end">운행 종료</string>
+	<string name="state_near">곧 도착</string>
+	
+	<string name="max_favorite">즐겨찾기를 더이상 추가 할 수 없습니다.</string>
+	
+	<string name="mail">smarterbus@doppelsoft.net</string>
+
+	
+	<!-- analytics -->
+	<string name="analytics_category_event">event</string>
+	<string name="analytics_action_searchFrag">search_frag</string>
+	<string name="analytics_label_searchAction">search_action_btn</string>
+
+    <string name="analytics_category_event_banner">이벤트배너</string>
+
+	<string name="analytics_screen_main">메인</string>
+	<string name="analytics_screen_favorite">즐겨찾기</string>
+    <string name="analytics_screen_recent_search">최근검색</string>
+    <string name="analytics_screen_search">검색</string>
+    <string name="analytics_screen_boundary">주변검색</string>
+    <string name="analytics_screen_setting">설정</string>
+    <string name="analytics_screen_adwebview">이벤트웹뷰</string>
+	
+	<!-- plus login  -->
+    <string name="sign_out_button_name">Sign out</string>
+    <string name="revoke_access_button_name">Revoke access</string>
+    <string name="default_status"/>
+    <string name="loading_status">Loading…</string>
+    <string name="signing_in_status">Signing in with Google+.</string>
+    <string name="signed_in_status">Signed in as \"%s\".</string>
+    <string name="unknown_person">Unknown</string>
+    <string name="signed_out_status">Signed out.</string>
+    <string name="revoke_access_status">Revoked access.</string>
+    <string name="revoke_access_error_status">Unable to revoke access.</string>
+    <string name="plus_generic_error">Sign in with Google is not available.</string>
+    
+    <!-- facebook login  -->
+    <string name="facebook_id">335291726621481</string>
+    
+    <!--  google ad test  -->
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_access">Revoke Access</string>
+
+    <!-- Workonoff Time Setting-->
+    <string name="work_timeset_section1_title">알림 받기</string>
+    <string name="work_timeset_section1_sub1">출근 시간</string>
+    <string name="work_timeset_section1_sub2">퇴근 시간</string>
+    <string name="work_timeset_section1_slidebtn_on">켜기</string>
+    <string name="work_timeset_section1_slidebtn_off">끄기</string>
+
+    <string name="work_timeset_section2_title">시간 설정</string>
+    <string name="work_timeset_section2_sub1">출근 시간</string>
+    <string name="work_timeset_section2_sub2">퇴근 시간</string>
+    <string name="work_timeset_section2_sub3">근무하는 날</string>
+
+    
+</resources>

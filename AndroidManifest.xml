@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="teamdoppelganger.smarterbus"
+    android:versionCode="103"
+    android:versionName="2.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <permission
+        android:name="com.example.mappathtest.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="teamdoppelganger.smarterbus.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+
+    <application
+        android:name=".common.SBInforApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/main_icon"
+        android:label="@string/app_name"
+        android:hardwareAccelerated="true"
+        android:theme="@style/AppTheme" >
+
+        <activity
+            android:name=".SBRideAlarmActivity"
+            android:theme="@style/StyledIndicators" >
+        </activity>
+        <activity
+            android:name=".SBWorkOnOffActivity"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".SBWorkAddActivity"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".SBWorkTimeSetActivity"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".SBWorkAlarmActivity"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".SBSearchActivity"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".SBMainEditActivity"
+            android:theme="@style/StyledIndicators" />
+        <receiver android:name=".service.SBWorkAlarmReceiver" />
+        <receiver android:name=".service.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".SBDownloadActivity"
+            android:label="@string/app_name"
+            android:theme="@style/StyledIndicators" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SBMainNewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden">
+        </activity>
+        <activity
+            android:name=".SBMainActivity"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".SBIntroActivity"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".SBMenuActivity"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name=".SBDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".SBAutoCompleteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".SBEditWidgetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SBWebView"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".SBAdWebView"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".SBPathResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".SBStopWidgetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SBEditFavoriteActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".SBRouteSearchResultActivity" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyC9sIo9CA0MTil5cSlpUlKtEJnMoAbXqPU" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <uses-library android:name="com.google.android.maps" />
+
+        <!-- 알람 -->
+        <service
+            android:name="teamdoppelganger.smarterbus.service.BusAlarmService"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="teamdoppelganger.smarterbus.service.busAlarmService.startService" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".SBAlarmDialogActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 위젯 -->
+
+        <!-- widget type 1 -->
+        <receiver
+            android:name="teamdoppelganger.smarterbus.service.WidgetProvider2x1"
+            android:label="[전국스마트버스]도착정보 2x1" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_2x1_provider" />
+        </receiver>
+        <!-- widget type 2 -->
+
+        <receiver
+            android:name="teamdoppelganger.smarterbus.service.WidgetProvider4x2"
+            android:label="[전국스마트버스]정류장 4x2" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_4x2_provider" />
+        </receiver>
+
+        <activity
+            android:name=".SBWidgetActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="teamdoppelganger.smarterbus.service.WidgetService"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="teamdoppelganger.smarterbus.service.BusWidgetService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="teamdoppelganger.smarterbus.service.WidgetListService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+
+        <!-- 애드립 사용을 위해 꼭 추가해주세요. -->
+        <activity
+            android:name="com.mocoplex.adlib.AdlibDialogActivity"
+            android:theme="@android:style/Theme.Translucent"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden" />
+
+        <activity android:name="com.mocoplex.adlib.AdlibVideoPlayer"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden" />
+        <!-- 애드립 사용을 위해 꼭 추가해주세요. -->
+
+        <!-- MEZZO MEDIA - 광고 노출을 위해 필요한 선언입니다. -->
+        <meta-data android:name="MEZZO_WINDOW_ID" android:value="banner" />
+        <!-- MEZZO GPS 사용여부 0:사용안함 1:사용 -->
+        <meta-data android:name="GPS_USE" android:value="0" />
+        <!-- MEZZO DEBUG 모드 사용여부 0:사용안함 1:사용 -->
+        <meta-data android:name="DEBUG_MODE" android:value="0" />
+        <activity
+            android:name="com.mapps.android.view.InterstitialView"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- ADAM - 전면광고 노출을 위해 필요한 선언입니다. -->
+        <activity android:name="net.daum.adam.publisher.impl.AdInterstitialActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+        <!-- ADMOB - Google Play 버전을 위한 선언입니다. -->
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <!-- ADMOB - 사용하지 않는다면 여기까지 삭제 -->
+
+        <!-- INMOBI - 광고 노출을 위해 필요한 선언입니다. -->
+        <activity android:name="com.inmobi.rendering.InMobiAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:hardwareAccelerated="true" />
+
+        <activity android:name="com.facebook.ads.AudienceNetworkActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <activity android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity"
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <activity android:name="com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity"
+            android:label="OAuth2.0 In-app" android:screenOrientation="portrait"/>
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_id"/>
+
+        <activity android:name="FacebookLogin"/>
+        <activity android:name=".NaverLogin"
+            android:theme="@style/StyledIndicators"/>
+        <activity android:name="GooglePlus"></activity>
+
+    </application>
+
+
+
+</manifest>

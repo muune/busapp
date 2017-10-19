@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+         xmlns:dragAndDrop="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SBMainActivity" 
+    android:background="#ffffff">
+
+    <!-- <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    
+    temp
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stopSearch"
+        android:text=" 정류소 search"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/busSearch"
+        android:text="버스 search"
+        android:layout_toRightOf="@id/stopSearch"     
+        /> -->
+<!--     <LinearLayout -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="50dp" -->
+<!--         android:background="@drawable/ad" -->
+<!--         android:id="@+id/adLayout" -->
+<!--         android:orientation="vertical" -->
+<!--         android:layout_alignParentBottom="true" -->
+<!--         android:visibility="gone"/> -->
+    
+<!--     <include  -->
+<!--         android:id="@+id/adLayout" -->
+<!--         layout="@layout/ad_layout"/> -->
+    
+    <!-- adlib adview -->
+    <include layout="@layout/admixer" />
+    
+    <teamdoppelganger.smarterbus.lib.viewpagerindicator.TabPageIndicator
+        android:id="@+id/indicator"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        />
+    <ImageView android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#a9a9a9"
+        android:layout_below="@id/indicator"
+        android:id="@+id/indicatorLine"
+        />
+        
+        
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/indicatorLine"
+        android:layout_above="@id/admixer_layout"
+        />
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/indicator"
+        android:layout_above="@id/admixer_layout"
+        android:visibility="gone"
+        android:id="@+id/mainProgress">
+        
+        <ProgressBar 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/centerProgress"
+            android:layout_gravity="center"
+            />
+    </FrameLayout>
+     <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:background="@android:color/transparent" />
+</RelativeLayout>

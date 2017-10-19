@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:gravity="center_vertical">
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationTxt"        
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textSize="13sp"
+        android:textColor="#777777"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/head"
+        android:orientation="vertical">
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#aaaaaa"
+            />
+        <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headTxt"                   
+        android:textSize="14sp"        
+        android:textColor="#333333"
+        android:paddingLeft="10dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:background="#ebebeb"   
+        />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#aaaaaa"
+            />
+        
+        
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/head"     
+        android:id="@+id/bodySection"
+        android:layout_toLeftOf="@id/locationTxt">
+        
+        <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lineName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="19dp"
+        android:textColor="#333333"
+        android:singleLine="true"
+        />
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+            
+             <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:id="@+id/lineDetail"		        
+		        android:singleLine="true"
+		        android:textSize="14sp"
+		        android:textColor="#777777"
+		        android:layout_marginRight="10dp"
+		        />
+             
+             <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:id="@+id/stopNextDetail"		        
+		        android:singleLine="true"		        
+		        android:textSize="14sp"
+		        android:textColor="#777777"
+		        />
+            
+            
+            
+            
+        </LinearLayout>
+    
+   
+        
+    </LinearLayout>
+    
+    
+    
+    
+    <!-- <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linetime"
+        android:layout_below="@id/lineDetail"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        /> -->
+    
+    
+    
+    
+    
+    
+
+</RelativeLayout>

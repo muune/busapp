@@ -1,0 +1,326 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coverLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".SBMainActivity" >
+    
+    <LinearLayout
+        android:id="@+id/searchSectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp" >
+
+        <Spinner
+            android:id="@+id/searchSpin"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/spinner"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/search1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/searchEdit1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"                        
+                        android:hint="@string/hint_stop_search"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:paddingRight="20dp"                        
+                         />
+
+                    <ImageView
+                        android:id="@+id/seachEdit1Del"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"      
+                		android:gravity="center"                        
+                        android:layout_alignBaseline="@id/searchEdit"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/btn_text_delete" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/search2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/searchEdit2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:paddingRight="20dp"
+                        android:drawablePadding="2dp"
+                        
+                        />
+
+                    <ImageView
+                        android:id="@+id/seachEdit2Del"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"      
+                		android:gravity="center"
+                        android:layout_alignBaseline="@id/searchEdit2"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/btn_text_delete" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/searchActionBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_course"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/btn_ic_course_disabled"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="경로\n검색"
+                android:textColor="@drawable/route_text" 
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/lineImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchSectionLayout"
+        android:scaleType="fitXY"
+        android:src="@drawable/submenu_shadow" />
+
+    <!-- temp -->
+    
+    <TextView
+        android:id="@+id/searchDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lineImg"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="검색중입니다."
+        android:visibility="gone"
+        />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lineImg"
+        android:gravity="center_vertical" />
+
+
+    <RelativeLayout
+        android:id="@+id/routeSearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lineImg"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/tabSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f3f3f3"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/searchBtnMode1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@drawable/btn_stop"
+                    android:text="즐겨찾기"
+                    android:textColor="@drawable/recent_text" />
+
+                <Button
+                    android:id="@+id/searchBtnMode2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:background="@drawable/btn_bus"
+                    android:text="지도"
+                    android:textColor="@drawable/recent_text" />
+            </LinearLayout>
+            
+            
+            
+        </RelativeLayout>
+        <ImageView		        
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/tabSection"
+		        android:scaleType="fitXY"
+		        android:src="@drawable/submenu_shadow" />
+
+        <!--
+        <LinearLayout
+            android:id="@+id/tabSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/searchBtnMode1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="search1" />
+
+            <Button
+                android:id="@+id/searchBtnMode2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="search2" />
+        </LinearLayout>
+        -->
+
+        <RelativeLayout
+            android:id="@+id/resultId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tabSection"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/searchResult"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/mapLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/buttonLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_search_map_l_bg"
+                        android:gravity="center"
+                        android:orientation="horizontal" 
+                        android:id="@+id/startSelectBtn">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/btn_search_ic_start" />
+
+                        <TextView     
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center"
+                            android:text="출발"
+                            android:textColor="#555555"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_search_map_l_bg"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:id="@+id/endSelectBtn" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/btn_search_ic_start" />
+
+                        <TextView                            
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center"
+                            android:text="도착"
+                            android:textColor="#555555"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/buttonLayout" >
+
+                    <fragment
+                        android:id="@+id/map2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        class="com.google.android.gms.maps.SupportMapFragment"
+                        android:scrollingCache="false"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/centerImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/location_pin" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"        
+        android:id="@+id/frame"/>
+
+
+    
+
+</RelativeLayout>

@@ -1,0 +1,413 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coverLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".SBMainActivity" >
+    
+    <teamdoppelganger.smarterbus.util.widget.KeyboardCheckLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/keyboardCheck2">
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:id="@+id/upLayout"
+	        android:clipChildren="false"
+	        android:orientation="vertical" >
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:orientation="vertical" >
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginBottom="10dp"
+	                android:layout_marginTop="10dp"
+	                android:text="@string/favorite_edit" />
+	            
+	            <ImageView 
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/favoriteLine"				
+				android:src="@drawable/submenu_shadow"
+				android:scaleType="fitXY"
+			/>
+	        </LinearLayout>
+	
+	        <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="150dp"
+	            android:background="#f2f2f2"
+	            android:orientation="vertical"
+	            android:id="@+id/ticketAndTxtLayout" >
+	
+	            <teamdoppelganger.smarterbus.util.widget.TicketLayout
+	                android:id="@+id/ticket"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerInParent="true" >
+	            </teamdoppelganger.smarterbus.util.widget.TicketLayout>
+	            
+	            <TextView
+	                android:layout_width="match_parent"
+	                android:layout_height="50dp"
+	                android:background="#983838"
+	                android:textColor="#ffffff"
+	                android:gravity="center"
+	                android:layout_centerInParent="true" 
+	                android:layout_marginLeft="20dp"
+	                android:layout_marginRight="20dp"
+	                android:id="@+id/stopTicket"
+	                android:visibility="gone"
+	                />
+	            
+	            
+	        </RelativeLayout>
+	        
+	        <ImageView 
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"						
+				android:src="@drawable/submenu_shadow"
+				android:scaleType="fitXY" />
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:layout_marginRight="10dp"
+	            android:orientation="horizontal" >
+	
+	            <TextView
+	                android:id="@+id/edit_name1"
+	                android:layout_width="60dp"
+	                android:layout_height="match_parent"
+	                android:gravity="left|center_vertical"
+	                android:text="@string/favorite_route_name"
+	                android:textColor="#000000" />
+	
+	            <RelativeLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="left"
+	                android:gravity="left|center_vertical"
+	                android:orientation="horizontal" >
+	
+	                <EditText
+	                    android:id="@+id/nameEdit1"
+	                    android:layout_width="250dp"
+	                    android:layout_height="wrap_content"
+	                    android:singleLine="true" />
+	
+	                <TextView
+	                    android:id="@+id/nameEdit1_SUB"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="50dp"
+	                    android:gravity="left|center_vertical"
+	                    android:textColor="#000000"
+	                    android:visibility="gone" />
+	            </RelativeLayout>
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:layout_marginRight="10dp"
+	            android:orientation="horizontal" >
+	
+	            <TextView
+	                android:id="@+id/edit_name2"
+	                android:layout_width="60dp"
+	                android:layout_height="match_parent"
+	                android:gravity="left|center_vertical"
+	                android:text="@string/favorite_stop_name"
+	                android:textColor="#000000" />
+	
+	            <EditText
+	                android:id="@+id/nameEdit2"
+	                android:layout_width="250dp"
+	                android:layout_height="wrap_content"	                
+	                android:singleLine="true"/>
+	        </LinearLayout>
+	
+	        <RelativeLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content" >
+	
+	            <LinearLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="10dp"
+	                android:layout_marginRight="10dp"
+	                android:clipChildren="false"
+	                android:orientation="horizontal" 
+	                android:id="@+id/colorSelectLayout1">
+	
+	                <TextView
+	                    android:layout_width="60dp"
+	                    android:layout_height="match_parent"
+	                    android:gravity="left|center_vertical"
+	                    android:text="@string/favorite_color_type"
+	                    android:textColor="#000000" />
+	
+	                <LinearLayout
+	                    android:id="@+id/colorLayout"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_weight="1"
+	                    android:clipChildren="false"
+	                    android:orientation="horizontal" >
+	
+	                    <ImageView
+	                        android:id="@+id/color1"
+	                        android:layout_width="50dp"
+	                        android:layout_height="50dp"
+	                        android:background="@drawable/color_box_top"
+	                        android:clipChildren="false"
+	                        android:scaleType="center"
+	                        android:src="@drawable/color_top_1" />
+	
+	                    <ImageView
+	                        android:id="@+id/color2"
+	                        android:layout_width="50dp"
+	                        android:layout_height="50dp"
+	                        android:scaleType="center"
+	                        android:src="@drawable/color_top_2" />
+	
+	                    <ImageView
+	                        android:id="@+id/color3"
+	                        android:layout_width="50dp"
+	                        android:layout_height="50dp"
+	                        android:scaleType="center"
+	                        android:src="@drawable/color_top_3" />
+	
+	                    <ImageView
+	                        android:id="@+id/color4"
+	                        android:layout_width="50dp"
+	                        android:layout_height="50dp"
+	                        android:scaleType="center"
+	                        android:src="@drawable/color_top_4" />
+	
+	                    <ImageView
+	                        android:id="@+id/color5"
+	                        android:layout_width="50dp"
+	                        android:layout_height="50dp"
+	                        android:scaleType="center"
+	                        android:src="@drawable/color_top_5" />
+	                </LinearLayout>
+	            </LinearLayout>
+	
+	            <LinearLayout
+	                android:id="@+id/colorLayout2"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="10dp"
+	                android:layout_marginRight="10dp"
+	                android:layout_marginTop="-2dp"
+	                android:orientation="horizontal" 
+	                android:layout_below="@id/colorSelectLayout1"
+	                >
+	
+	                <TextView
+	                    android:layout_width="60dp"
+	                    android:layout_height="match_parent"
+	                    android:gravity="left|center_vertical"
+	                    android:text="@string/favorite_color_detail"
+	                    android:textColor="#000000" />
+	
+	                <RelativeLayout
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_weight="1" >
+	
+	                    <ImageView
+	                        android:layout_width="250dp"
+	                        android:layout_height="50dp"
+	                        android:background="@drawable/color_box_btm" />
+	
+	                    <LinearLayout
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_weight="1"
+	                        android:orientation="horizontal" >
+	                        
+	                        
+	                            
+	                            
+	                        <RelativeLayout 
+	                            android:layout_width="50dp"
+	                            android:layout_height="50dp"
+	                            android:gravity="center"
+	                            android:id="@+id/subColorLayout1"
+	                            >
+	                            
+	                            <ImageView
+	                                android:layout_width="match_parent"
+	                                android:layout_height="match_parent"
+	                                android:scaleType="center"
+	                                android:id="@+id/subColor1"
+	                                android:src="@drawable/color_sub1_1"/>
+	                            
+	                            <ImageView
+	                                android:layout_width="match_parent"
+	                                android:layout_height="match_parent"
+	                                android:scaleType="center"
+	                                android:id="@+id/subColor1_1"
+	                                android:src="@drawable/ic_color_sub_focused"/>
+	                         </RelativeLayout>
+	                         
+	                        <RelativeLayout 
+	                            android:layout_width="50dp"
+	                            android:layout_height="50dp"
+	                            android:gravity="center"
+	                            android:id="@+id/subColorLayout2"
+	                            >
+	                            
+	                            <ImageView
+	                                android:layout_width="match_parent"
+	                                android:layout_height="match_parent"
+	                                android:scaleType="center"
+	                                android:id="@+id/subColor2"
+	                                android:src="@drawable/color_sub1_1"/>
+	                            
+	                            <ImageView
+	                                android:layout_width="match_parent"
+	                                android:layout_height="match_parent"
+	                                android:scaleType="center"
+	                                android:id="@+id/subColor2_1"
+	                                android:src="@drawable/ic_color_sub_focused"/>
+	                         </RelativeLayout>
+	                         
+	                        <RelativeLayout 
+	                            android:layout_width="50dp"
+	                            android:layout_height="50dp"
+	                            android:gravity="center"
+	                            android:id="@+id/subColorLayout3"
+	                            >
+	                            
+	                            <ImageView
+	                                android:layout_width="match_parent"
+	                                android:layout_height="match_parent"
+	                                android:scaleType="center"
+	                                android:id="@+id/subColor3"
+	                                android:src="@drawable/color_sub1_1"/>
+	                            
+	                            <ImageView
+	                                android:layout_width="match_parent"
+	                                android:layout_height="match_parent"
+	                                android:scaleType="center"
+	                                android:id="@+id/subColor3_1"
+	                                android:src="@drawable/ic_color_sub_focused"/>
+	                         </RelativeLayout>
+	                         
+	                        <RelativeLayout 
+	                            android:layout_width="50dp"
+	                            android:layout_height="50dp"
+	                            android:gravity="center"
+	                            android:id="@+id/subColorLayout4"
+	                            >
+	                            
+	                            <ImageView
+	                                android:layout_width="match_parent"
+	                                android:layout_height="match_parent"
+	                                android:scaleType="center"
+	                                android:id="@+id/subColor4"
+	                                android:src="@drawable/color_sub1_1"/>
+	                            
+	                            <ImageView
+	                                android:layout_width="match_parent"
+	                                android:layout_height="match_parent"
+	                                android:scaleType="center"
+	                                android:id="@+id/subColor4_1"
+	                                android:src="@drawable/ic_color_sub_focused"/>
+	                         </RelativeLayout>
+	                         
+	                        <RelativeLayout 
+	                            android:layout_width="50dp"
+	                            android:layout_height="50dp"
+	                            android:gravity="center"
+	                            android:id="@+id/subColorLayout5"
+	                            >
+	                            
+	                            <ImageView
+	                                android:layout_width="match_parent"
+	                                android:layout_height="match_parent"
+	                                android:scaleType="center"
+	                                android:id="@+id/subColor5"
+	                                android:src="@drawable/color_sub1_1"/>
+	                            
+	                            <ImageView
+	                                android:layout_width="match_parent"
+	                                android:layout_height="match_parent"
+	                                android:scaleType="center"
+	                                android:id="@+id/subColor5_1"
+	                                android:src="@drawable/ic_color_sub_focused"/>
+	                         </RelativeLayout>
+	
+	                       
+	                    </LinearLayout>
+	                </RelativeLayout>
+	            </LinearLayout>
+	        </RelativeLayout>
+	    </LinearLayout>
+	
+	   
+	    
+	    
+	    <!-- android:layout_above="@id/busImg" -->
+	    <ListView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/list"        
+	        android:layout_below="@id/upLayout"/>
+
+		<include layout="@layout/admixer" />
+<!-- 	    <include  -->
+<!-- 	        android:id="@+id/adLayout" -->
+<!--         layout="@layout/ad_layout" -->
+<!--         android:visibility="gone"/> -->
+
+
+
+ 	<LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@id/admixer_layout"
+	        android:layout_margin="15dp"
+	        android:orientation="horizontal"
+	        android:id="@+id/buttonLayout" >
+	
+	        <TextView
+	            android:id="@+id/cancel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="15dp"
+	            android:layout_weight="1"
+	            android:background="@drawable/btn_back"
+	            android:textColor="#ffffff"
+	            android:gravity="center"
+	            android:text="취소" />
+	
+	        <TextView
+	            android:id="@+id/ok"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="15dp"
+	            android:layout_weight="1"
+	            android:background="@drawable/btn_ok"
+	            android:textColor="#ffffff"
+	            android:gravity="center"
+	            android:text="확인" />
+	    </LinearLayout>
+
+
+    </teamdoppelganger.smarterbus.util.widget.KeyboardCheckLayout>
+
+</RelativeLayout>

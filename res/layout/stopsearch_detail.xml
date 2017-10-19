@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    
+    tools:context=".SBMainActivity"
+    android:background="#ffffff" >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"        
+        android:id="@+id/line1"
+        android:src="@drawable/submenu_shadow"
+		android:scaleType="fitXY"        
+        />
+	<include 
+	    layout="@layout/businfor_header"
+	    android:id="@+id/header"
+	    android:layout_below="@id/line1"/>
+	<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:src="@drawable/submenu_shadow"
+		android:scaleType="fitXY"        
+        android:id="@+id/line"
+        />  
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:id="@+id/netCheckTxt"
+        android:text="인터넷 상태를 확인해주세요" 
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+        
+	<!-- <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/specialInfoLayout"
+	    android:layout_below="@id/line"
+	    android:orientation="vertical"
+	    >
+	    
+	    <ListView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/specialInfoListView"/>
+	    
+	</LinearLayout> -->
+	
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
+        android:layout_below="@id/netCheckTxt" />
+    <teamdoppelganger.smarterbus.util.widget.BlockRelative
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/progressLayout"
+        android:layout_below="@id/header" 
+        >
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/loading"
+            android:layout_centerInParent="true"/>
+        
+    </teamdoppelganger.smarterbus.util.widget.BlockRelative>
+    
+   
+    
+
+</RelativeLayout>

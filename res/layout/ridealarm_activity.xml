@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/actionbar_layout"
+        android:id="@+id/actionbar_layout" />
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/admixer_layout"
+        android:layout_below="@+id/actionbar_layout"
+        android:id="@+id/tabHost">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TabWidget
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@android:id/tabs"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@android:id/tabs"
+                android:id="@+id/info_title"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="#EAEAEA"
+                android:text="[승차 정보]"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info_title"
+                android:id="@+id/info_route"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="#EAEAEA"
+                android:text="승차 노선"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info_route"
+                android:id="@+id/info_station"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="#EAEAEA"
+                android:text="승차 정류장"/>
+
+            <!--<include layout="@layout/ridealarm_station"-->
+                <!--android:id="@+id/station_layout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@id/info_station"/>-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/info_station"
+                android:id="@android:id/tabcontent"
+                android:padding="10dp">
+
+                <ScrollView
+                    android:id="@+id/tab0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <include layout="@layout/ridealarm_on" />
+                </ScrollView>
+
+                <ScrollView
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <include layout="@layout/ridealarm_off" />
+                </ScrollView>
+            </FrameLayout>
+        </RelativeLayout>
+    </TabHost>
+</RelativeLayout>

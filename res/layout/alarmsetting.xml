@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/alarmsetting_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/contents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/choiceBus"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/c_bus1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@drawable/radio_txt_color"
+                android:gravity="center"
+                android:button="@drawable/empty"
+                android:background="@drawable/radio_bus_left"
+                android:enabled="false" />
+
+            <RadioButton
+                android:id="@+id/c_bus2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@drawable/radio_txt_color"
+                android:gravity="center"
+                android:button="@drawable/empty"
+                android:background="@drawable/radio_bus_right"
+                android:enabled="false" />
+        </RadioGroup>
+        
+        <RadioGroup
+            android:id="@+id/choice2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"         
+            android:layout_marginTop="15dp"   
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/c2_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@drawable/radio_txt_color"
+                android:gravity="center"
+                android:button="@drawable/empty"
+                android:background="@drawable/radio_time_left"/>
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/btn_minute_between_line"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_vertical" 
+                />
+
+            <RadioButton
+                android:id="@+id/c2_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@drawable/radio_txt_color"
+                android:gravity="center"
+                android:button="@drawable/empty"
+                android:background="@drawable/radio_time_center" />
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/btn_minute_between_line"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_vertical" 
+                />
+            
+            <RadioButton
+                android:id="@+id/c2_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@drawable/radio_txt_color"
+                android:gravity="center"
+                android:button="@drawable/empty"
+                android:background="@drawable/radio_time_center" />
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/btn_minute_between_line"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_vertical" 
+                />
+            
+            <RadioButton
+                android:id="@+id/c2_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@drawable/radio_txt_color"
+                android:gravity="center"
+                android:button="@drawable/empty"
+                android:background="@drawable/radio_time_right" />
+        </RadioGroup>
+        
+
+       <!--  <TextView
+            android:id="@+id/subTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알람을 설정할 버스를 선택해주세요" />
+
+        <ListView
+            android:id="@+id/alarmList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+     
+
+        <RelativeLayout
+            android:id="@+id/detailSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" /> -->
+    </LinearLayout>
+
+    <!-- <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /> -->
+
+</RelativeLayout>

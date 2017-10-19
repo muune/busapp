@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"        
+        android:id= "@+id/navigation" 
+        >
+        
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backBtn"
+            android:layout_alignParentLeft="true"
+            android:text="back" 
+            android:visibility="gone"/>
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/layout_left_margin"
+            android:id="@+id/stopDetailHeader">            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="23sp"
+                android:id="@+id/headerStopName" />
+            <TextView
+               	android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#9d9d9d"
+                android:textSize="13sp"
+                android:id="@+id/headerStopNum" />            
+        </LinearLayout>
+        
+        
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/layout_left_margin"
+            android:id="@+id/routeDetailHeader">
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:id="@+id/headerBusNum"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#d1d1d1"
+                    android:id="@+id/headerBusType"
+                    android:visibility="gone"/>               
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/headerRouteStartEnd"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/headerRouteLocation"                    
+                    android:textColor="#aaaaaa"
+                    android:textSize="13sp"/>               
+            </LinearLayout>            
+        </LinearLayout>
+        
+        
+        
+        <!-- <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/topic" 
+            android:layout_centerInParent="true"/> -->
+        
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancelBtn"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn"
+            android:src="@drawable/btn_close"
+            android:scaleType="center"
+            android:gravity="center"
+            android:padding="10dp"          
+            android:text="exit" />
+        
+    </RelativeLayout>
+
+    <include layout="@layout/admixer" />
+<!--     <include  -->
+<!--         android:id="@+id/adLayout" -->
+<!--         layout="@layout/ad_layout"/> -->
+    
+
+<!--     <LinearLayout -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="50dp" -->
+<!--         android:background="@drawable/ad" -->
+<!--         android:id="@+id/adLayout" -->
+<!--         android:orientation="vertical" -->
+<!--         android:layout_alignParentBottom="true" -->
+<!--         android:visibility="gone"/> -->
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"        
+        android:id= "@+id/coverLayout" 
+        android:layout_above="@id/admixer_layout"
+        android:layout_below="@id/navigation"/>
+
+
+</RelativeLayout>

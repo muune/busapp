@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/actionbar_layout"
+        android:id="@+id/actionbar_layout"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@id/admixer_layout"
+        android:layout_below="@+id/actionbar_layout">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/workAddList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="20dp"
+            android:id="@+id/alarm_add_empty"
+            android:textSize="16sp"
+            android:text="알림을 등록하기 위해서는 먼저 '버스 노선 + 정류장'유형으로 즐겨 찾기에 등록하셔야 합니다."/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/alarm_add_desc"
+            android:layout_below="@+id/workAddList"
+            android:padding="20dp"
+            android:textSize="16sp"
+            android:text="다른 경로를 선택하려면 '버스노선 + 정류장'유형으로 즐겨찾기에 등록하셔야 합니다"/>
+
+
+    </RelativeLayout>
+
+    <!-- adlib adview -->
+    <include layout="@layout/admixer" />
+
+</RelativeLayout>

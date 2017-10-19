@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/intro2" >
+    
+   <!--  <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/intro_bg_image" />
+
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:src="@drawable/intro_bus_image"   
+        android:id="@+id/busImg"    
+        />
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:src="@drawable/title_image"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/busImg"
+        android:layout_centerHorizontal="true"
+        /> -->
+        
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:scaleType="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imgview"
+        android:src="@drawable/intro_doppel_image"       
+        />
+    
+    
+    
+
+</RelativeLayout>

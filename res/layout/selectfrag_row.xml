@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:gravity="center_vertical">
+    
+    <CheckBox 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check"
+        android:layout_centerVertical="true"/>
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/textLayout"
+        android:layout_toRightOf="@id/check">
+        
+        <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lineName"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+        android:textColor="#333333"
+        />
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lineDetail"
+        android:layout_below="@id/lineName"
+        android:layout_marginLeft="10dp"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:textColor="#777777"
+        />
+        
+    </LinearLayout>
+    
+    
+    <!-- <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linetime"
+        android:layout_below="@id/lineDetail"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        /> -->
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationTxt"        
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:textSize="15sp"
+        android:textColor="#aaaaaa"
+        />
+    
+    <ImageView
+    android:id="@id/drag_handle"
+    android:background="@drawable/btn_edit_normal"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginRight="10dp"
+    android:layout_centerVertical="true"
+    android:layout_alignParentRight="true"
+    android:duplicateParentState="true"
+    />
+    
+    
+    
+
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/realItemSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical"
+            android:id="@+id/timeLayout" >
+
+            <TextView
+                android:id="@+id/linetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"               
+                android:textColor="@color/bus_arrive_color"
+                android:layout_gravity="right"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/linetime2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/bus_arrive_color"
+                android:layout_gravity="right"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"      
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentLeft="true"      
+            android:layout_marginRight="15dp"            
+            android:layout_toLeftOf="@id/timeLayout"
+            android:id="@+id/nameLayout"
+            android:orientation="horizontal">
+            
+            <TextView
+	            android:id="@+id/lineName"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"	            
+	            android:textColor="#333333"
+	            android:textSize="18sp" 
+	            android:singleLine="true"/>
+            <TextView
+	            android:id="@+id/lineSubName"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"	            
+	            android:textColor="#959595"
+	            android:textSize="13dp"
+	            android:singleLine="true" />
+            
+            
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/lineDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameLayout"
+            android:layout_toLeftOf="@id/timeLayout"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentLeft="true"
+            android:singleLine="true"
+            android:textColor="#646464"
+            android:textSize="13sp" />
+
+        
+        <ProgressBar 
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:id="@+id/rowProgress"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/itemHeaderSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ebebeb"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/itemHeaderTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

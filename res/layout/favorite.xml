@@ -1,0 +1,231 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:dslv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"   
+    tools:context=".SBMainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/stopfavorite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"        
+        android:orientation="vertical" >
+        
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_vertical"   
+            android:layout_marginLeft="10dp"
+            android:id="@+id/sortLayout"
+            android:background="@drawable/btn_favorite_select_layout"
+            >
+            
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:drawableLeft="@drawable/list_card"          
+            android:drawablePadding="5dp"
+            android:background="#ffffff"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/sortModeTxt" />
+            
+        </LinearLayout>
+            
+        
+            
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/sortLayout"
+            android:id="@+id/choiceFavoriteType"
+            android:background="@drawable/btn_favorite_btn"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_vertical"            
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="테마"
+            
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/choiceFavoriteType"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:gravity="center_vertical"
+            android:id="@+id/eventbannerLayout"
+            android:background="@drawable/btn_favorite_btn"
+            >
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="17dp"
+                android:layout_height="wrap_content"
+                android:button="@drawable/bus_checkbox"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eventbannerText"
+                android:text=" 이벤트 배너"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:id="@+id/editLayout"             
+            android:gravity="right"
+            android:orientation="horizontal"
+            >
+            
+            
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="편집"
+                android:drawableLeft="@drawable/btn_edit"
+                android:drawablePadding="10dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:background="@drawable/btn"
+                android:textSize="20sp"
+                android:id="@+id/editBtn" />            
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:gravity="center_vertical"
+			android:id="@+id/sortLayout1"
+			android:orientation="vertical"
+            android:layout_below="@id/editLayout"
+			android:visibility="gone">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingRight="5dp"
+                    android:scrollbars="none"
+                    android:id="@+id/horizontalId">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/imgLayout">
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <ImageView
+                    android:id="@+id/leftarrow"
+                    android:layout_width="18dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center|left"
+                    android:background="@drawable/btn_arrow_left_00" />
+                <ImageView
+                    android:id="@+id/rightarrow"
+                    android:layout_width="18dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center|right"
+                    android:background="@drawable/btn_arrow_right_00" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <ImageView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/submenu_shadow"
+            android:scaleType="fitXY"
+            android:layout_below="@id/sortLayout1"
+            android:id="@+id/indicatorLine" />
+
+        <ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_below="@id/sortLayout1"
+			android:id="@+id/scroll"
+			android:paddingTop="10dp">
+	        <teamdoppelganger.smarterbus.lib.pageDragDrop.DragDropGrid
+	            android:id="@+id/gridview"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@color/favorite_back" 
+	            	           
+	            />
+        </ScrollView>
+
+        <LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:id="@+id/listLayout"
+		    android:layout_below="@id/sortLayout1"
+		    android:paddingTop="10dp"
+		    android:visibility="gone">
+		    
+		    <com.mobeta.android.dslv.DragSortListView
+				    android:id="@+id/listViewFavo"
+				    android:layout_width="fill_parent"
+				    android:layout_height="fill_parent"    
+				    android:choiceMode="multipleChoice"
+				    android:dividerHeight="1px"    
+				    dslv:collapsed_height="1px"
+				    dslv:drag_enabled="true"
+				    dslv:drag_handle_id="@id/drag_handle"
+				    dslv:drag_scroll_start="0.33"
+				    dslv:drag_start_mode="onDown"
+				    dslv:float_alpha="0.2"
+				    dslv:remove_enabled="false"
+				    dslv:slide_shuffle_speed="0.3" />
+		    
+		</LinearLayout>
+        
+		
+		
+        
+		<ImageView 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/favoriteLine"
+			android:layout_below="@id/editLayout"
+			android:src="@drawable/submenu_shadow"
+			android:scaleType="fitXY"
+			/>
+		
+		
+    </RelativeLayout>
+    
+    <TextView 
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/nothingContents"					
+			android:text="즐겨찾기 내역이 없습니다."	
+			android:gravity="center"
+			android:layout_centerInParent="true"		
+			/>
+    
+        
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"        
+        android:id="@+id/frameFavorite"/>
+
+
+
+</RelativeLayout>

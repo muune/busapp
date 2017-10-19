@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:dragAndDrop="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+    
+
+<!--     <LinearLayout -->
+<!--         android:id="@+id/adLayout" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="50dp" -->
+<!--         android:layout_alignParentBottom="true" -->
+<!--         android:background="@drawable/ad" -->
+<!--         android:orientation="vertical" -->
+<!--         android:visibility="gone" -->
+<!--          /> -->
+
+    <TextView
+        android:id="@+id/widget_activity_topic"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="정류소 위젯 생성"
+        android:textColor="#777777"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/widget_activity_preview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/widget_activity_topic"
+        android:background="#f2f2f2"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <teamdoppelganger.smarterbus.util.widget.TicketLayout
+            android:id="@+id/ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+        </teamdoppelganger.smarterbus.util.widget.TicketLayout>
+
+        <TextView
+            android:id="@+id/stopTicket"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/widget_top1_5"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/widget_activity_topic"
+        android:scaleType="fitXY"
+        android:src="@drawable/submenu_shadow" />
+
+    <ImageView
+        android:id="@+id/widgetLine1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/widget_activity_preview_layout"
+        android:background="#a9a9a9"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/selectLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_back"
+            android:gravity="center"
+            android:text="취소"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_ok"
+            android:gravity="center"
+            android:text="다음 >"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+  
+    <RelativeLayout
+        android:id="@+id/timetable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/selectLayout"
+       android:layout_below="@id/widgetLine1"
+        >
+
+        <teamdoppelganger.smarterbus.util.widget.KeyboardCheckLayout
+            android:id="@+id/keyboardCheck"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <teamdoppelganger.smarterbus.util.widget.FixedTabsView
+                android:id="@+id/widget_activity_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/widget_activity_viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/widget_activity_tab"
+                android:background="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/allCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </teamdoppelganger.smarterbus.util.widget.KeyboardCheckLayout>
+    </RelativeLayout>
+ 
+
+    <RelativeLayout
+        android:id="@+id/coverLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectLayout" />
+
+</RelativeLayout>

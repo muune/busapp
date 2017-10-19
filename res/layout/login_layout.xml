@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f3f3f3">
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#dddddd"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:text="전국 스마트 버스 계정"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="10dp">
+        <Button 
+            android:id="@+id/login_plus"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="google plus"/>
+        <Button 
+            android:id="@+id/login_naver"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="naver"/>
+        <Button 
+            android:id="@+id/login_facebook"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="facebook"/>
+        <Button 
+            android:id="@+id/login_email"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="email"/>
+    </LinearLayout>
+</LinearLayout>

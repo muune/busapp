@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    
+    
+    
+    <dimen name="line_left_margin">30dp</dimen>
+    <dimen name="bus_left_margin">10dp</dimen>
+    <dimen name="line_width">10dp</dimen>
+    <dimen name="ticket_margin">10dp</dimen>
+    <dimen name="ticket_height">90dp</dimen>
+
+
+    <dimen name="alarm_title_size">25sp</dimen>
+    <dimen name="layout_left_margin">10dp</dimen>
+    
+    
+    <dimen name="ballon_font_size">11dp</dimen>
+    <dimen name="ballon_margin">7dp</dimen>
+    <dimen name="ballon_spare_size">6dp</dimen>
+    <dimen name="ballon_spare_size2">3dp</dimen>
+    <dimen name="txt_top_margin">2dp</dimen>
+    
+
+    <dimen name="spare_layout_height">100dp</dimen>
+    
+    
+    <dimen name="card_txt_size">19dp</dimen>
+    <dimen name="card_txt_size2">17dp</dimen>
+    <dimen name="card_txt_size3">15dp</dimen>
+    
+    <dimen name="card_sub_txt_size">18dp</dimen>
+    <dimen name="card_sub_txt_size2">16dp</dimen>
+    <dimen name="card_sub_txt_size3">14dp</dimen>
+    
+    <dimen name="choice_dialog_width">280dp</dimen>
+    <!-- <dimen name="choice_dialog_height">310dp</dimen> -->
+    <dimen name="choice_dialog_height">350dp</dimen>
+    <dimen name="choice_dialog_height2">330dp</dimen>
+    
+    
+    <dimen name="favorite_list_margin_left">5dp</dimen>
+    <dimen name="favorite_list_width">13dp</dimen>
+    <dimen name="favorite_list_height">10dp</dimen>
+    
+    
+    
+    
+</resources>

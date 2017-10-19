@@ -1,0 +1,27 @@
+<!-- ?xml version="1.0" encoding="utf-8"? -->
+<resources>
+
+    <string-array name="list_favorite">        
+        <item>홈 바로가기 생성</item>
+        <item>수정</item>
+        <item>삭제</item>
+    </string-array>
+    <string-array name="setting">
+        <item>지역 설정</item>        
+        <item>어플리케이션 문의 및 보고 오류 보고</item>
+        <item>FAQ</item>
+        <item>동기화</item>
+        <item>알림</item>
+        <item>진동설정</item>
+        <item>위치기반서비스 이용약관</item>
+    </string-array>
+    <string-array name="longSelect">
+        <item>노선 정보 보기</item>
+        <item>즐겨찾기하기</item>
+        <item>알람설정하기</item>
+    </string-array>
+    <string-array name="longStopSelect">
+        <item>즐겨찾기하기</item>        
+    </string-array>
+
+</resources>

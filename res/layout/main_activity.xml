@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:orientation="horizontal"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:id="@+id/main_top"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true">
+		<ImageButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/btn_edit"
+			android:layout_gravity="center"
+			android:id="@+id/main_menu"
+			android:background="#fff"/>
+
+		<EditText
+			android:id="@+id/searchEdit"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginLeft="15dp"
+			android:layout_marginRight="15dp"
+			android:layout_weight="1"
+			android:ems="10"
+			android:hint="버스, 정류장, 경로 검색"
+			android:inputType="textPersonName" />
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="내주변"
+			android:layout_gravity="center"/>
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="92dp"
+		android:gravity="center_vertical"
+		android:orientation="vertical"
+		android:layout_below="@id/main_top"
+		android:id="@+id/main_banner">
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			<HorizontalScrollView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:paddingRight="5dp"
+				android:scrollbars="none"
+				android:id="@+id/horizontalId">
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="horizontal"
+					android:gravity="center_vertical"
+					android:id="@+id/imgLayout">
+					<ImageView
+						android:layout_width="200dp"
+						android:layout_height="wrap_content"
+						android:src="@drawable/widget_preview_type_1"/>
+					<ImageView
+						android:layout_width="200dp"
+						android:layout_height="wrap_content"
+						android:src="@drawable/widget_preview_type_1"/>
+					<ImageView
+						android:layout_width="200dp"
+						android:layout_height="wrap_content"
+						android:src="@drawable/widget_preview_type_1"/>
+				</LinearLayout>
+			</HorizontalScrollView>
+			<ImageView
+				android:id="@+id/leftarrow"
+				android:layout_width="18dp"
+				android:layout_height="50dp"
+				android:layout_gravity="center|left"
+				android:background="@drawable/btn_arrow_left_00" />
+			<ImageView
+				android:id="@+id/rightarrow"
+				android:layout_width="18dp"
+				android:layout_height="50dp"
+				android:layout_gravity="center|right"
+				android:background="@drawable/btn_arrow_right_00" />
+		</FrameLayout>
+	</LinearLayout>
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/main_banner">
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<android.support.v7.widget.RecyclerView
+				android:id="@+id/favoriteList"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingLeft="5dp"/>
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/favoriteList"
+				android:layout_marginTop="15dp"
+				android:id="@+id/main_editBtn"
+				android:text="홈 화면 편집"/>
+		</RelativeLayout>
+	</ScrollView>
+
+	<ImageButton
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:padding="10dp"
+		android:src="@drawable/btn_refresh"
+		android:background="#fff"/>
+
+	<!-- adlib adview -->
+	<include layout="@layout/admixer" />
+</RelativeLayout>

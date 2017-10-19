@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SpanVariableGridView">
+        <attr name="numColumns" format="integer" />
+        <attr name="itemMargin" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="com.mapps.android.view.AdView">
+        <attr name="locationType" format="integer" />
+        <attr name="backgroundStretch" format="integer" />
+        <attr name="publisherCode" format ="string" />
+        <attr name="mediaCode" format ="string" />
+        <attr name="sectionCode" format ="string" />
+        <attr name="mediaType" format ="integer" />
+    </declare-styleable>
+    <declare-styleable name="com.mapps.android.view.EndingAdView">
+        <attr name="pCode" format ="string" />
+        <attr name="mCode" format ="string" />
+        <attr name="sCode" format ="string" />
+        <attr name="media_Type" format ="integer" />
+    </declare-styleable>
+  
+</resources>

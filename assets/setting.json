@@ -1,0 +1,8 @@
+{
+  "app":{
+    "debugMode":true
+  },
+  "db":{
+    "name":"bus0001"
+  }
+}
